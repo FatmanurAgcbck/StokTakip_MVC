@@ -1,0 +1,71 @@
+﻿@model StokMVC.Models.Entity.tblURUNLER
+@{
+    ViewBag.Title = "YeniUrun";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form method="post">
+    <h2>Yeni Kategori Ekleme</h2>
+    <br />
+
+    <label>Ürün Adı:</label>
+    @Html.TextBoxFor(x => x.ad, new { @class = "form-control" })
+    <br />
+
+    <label>Markası:</label>
+    @Html.TextBoxFor(x => x.marka, new { @class = "form-control" })
+    <br />
+
+    <label>Stok:</label>
+    @Html.TextBoxFor(x => x.stok, new { @class = "form-control" })
+    <br />
+
+    <label>Alış Fiyatı:</label>
+    @Html.TextBoxFor(x => x.alisFiyat, new { @class = "form-control" })
+    <br />
+
+    <label>Satış Fiyatı:</label>
+    @Html.TextBoxFor(x => x.satisFiyat, new { @class = "form-control" })
+    <br />
+
+    <label>Kategori:</label>
+    @Html.DropDownListFor(x=>x.tblKATEGORI.id, (List<SelectListItem>)ViewBag.drop, new {@class = "form-control"})
+    <br />
+
+    <button class="btn btn-info">Kaydet</button>
+</form>
+
+
+@* bu şekilde de yapılabilir*@
+@*<form method="post">
+    <h2>Yeni Ürün Ekleme</h2>
+    <br />
+    <div>
+        <label>Ürün Adı:</label>
+        <input type="text" class="form-control" name="ad" />
+    </div>
+    <div style="margin-top:15px">
+        <label>Markası:</label>
+        <input type="text" class="form-control" name="marka" />
+    </div>
+    <div style="margin-top:15px">
+        <label>Stok:</label>
+        <input type="text" class="form-control" name="stok" />
+    </div>
+    <div style="margin-top:15px">
+        <label>Alış Fiyatı:</label>
+        <input type="text" class="form-control" name="alisFiyat" />
+    </div>
+    <div style="margin-top:15px">
+        <label>Satış Fiyatı:</label>
+        <input type="text" class="form-control" name="satisFiyat" />
+    </div>
+    <div style="margin-top:15px">
+        <label>Kategori:</label>
+        <input type="text" class="form-control" name="kategori" />
+    </div>
+    <br />
+    <button class="btn btn-info">Kaydet</button>
+
+</form>*@
+
